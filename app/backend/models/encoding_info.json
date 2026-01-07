@@ -1,0 +1,88 @@
+{
+  "categorical_columns": [
+    "gender",
+    "course",
+    "internet_access",
+    "sleep_quality",
+    "study_method",
+    "facility_rating",
+    "exam_difficulty"
+  ],
+  "numeric_columns": [
+    "study_hours",
+    "class_attendance",
+    "sleep_hours"
+  ],
+  "encoded_features": {
+    "gender": [
+      "gender_male",
+      "gender_other"
+    ],
+    "course": [
+      "course_b.sc",
+      "course_b.tech",
+      "course_ba",
+      "course_bba",
+      "course_bca",
+      "course_diploma"
+    ],
+    "internet_access": [
+      "internet_access_yes"
+    ],
+    "sleep_quality": [
+      "sleep_quality_good",
+      "sleep_quality_poor"
+    ],
+    "study_method": [
+      "study_method_group study",
+      "study_method_mixed",
+      "study_method_online videos",
+      "study_method_self-study"
+    ],
+    "facility_rating": [
+      "facility_rating_low",
+      "facility_rating_medium"
+    ],
+    "exam_difficulty": [
+      "exam_difficulty_hard",
+      "exam_difficulty_moderate"
+    ]
+  },
+  "categorical_values": {
+    "gender": [
+      "Male",
+      "Female"
+    ],
+    "course": [
+      "Engineering",
+      "Business",
+      "Science",
+      "Arts"
+    ],
+    "internet_access": [
+      "Yes",
+      "No"
+    ],
+    "sleep_quality": [
+      "Poor",
+      "Average",
+      "Good"
+    ],
+    "study_method": [
+      "Self-study",
+      "Group Study",
+      "Online Videos",
+      "Mixed"
+    ],
+    "facility_rating": [
+      "Low",
+      "Medium",
+      "High"
+    ],
+    "exam_difficulty": [
+      "Easy",
+      "Medium",
+      "Hard"
+    ]
+  }
+}
