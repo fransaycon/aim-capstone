@@ -18,6 +18,7 @@ Workspace
 (rerun without)
 Collecting workspace information
 
+```
 aim-capstone/
 ├── app/
 │ ├── backend/
@@ -36,7 +37,7 @@ aim-capstone/
 ├── Franrey-Saycon-AIM-Capstone.ipynb # Model training notebook
 ├── kaggle-exam-score-prediction-dataset.csv
 └── requirements.txt # Python dependencies
-
+```
 
 ## 🚀 Installation & Setup
 
