@@ -98,3 +98,32 @@ Frontend: Vanilla JavaScript, HTML5, CSS3
 ML Model: Ridge Regression with StandardScaler
 AI Integration: OpenAI GPT-4
 Data: Kaggle Education Dataset (20,000 records)
+
+## 🌐 Deployment
+
+- Frontend (Render.com Static Site):
+  - URL: https://aim-capstone-frontend.onrender.com
+  - Type: Static Site
+  - Publish Directory: app/frontend
+  - No build command required (pure static assets)
+  - Ensure API base URL in frontend points to backend:
+    - In app/frontend/index.js set:
+      ```js
+      const API_URL = 'https://aim-capstone.onrender.com';
+      ```
+
+- Backend (Render.com Web Service with Gunicorn):
+  - URL: https://aim-capstone.onrender.com
+  - Start command:
+    ```bash
+    gunicorn --chdir app/backend -w 2 -k gthread --threads 8 --timeout 180 app:app
+    ```
+  - Environment:
+    - Runtime: Python 3.13
+    - Env vars: OPENAI_SECRET_KEY
+    - CORS: enabled via flask_cors
+  - Health check: GET /health
+
+- Notes:
+  - .env is optional in production; Gunicorn inherits OPENAI_SECRET_KEY from Render environment.
+  - Model artifacts must be present under app/backend/models on the deployed service.
